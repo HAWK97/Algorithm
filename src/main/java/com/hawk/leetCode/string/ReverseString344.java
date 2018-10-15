@@ -22,7 +22,7 @@ public class ReverseString344 {
      */
     public String reverseString2(String s) {
         StringBuilder ans = new StringBuilder(s);
-        // 直接用reverse方法，更简单
+        // 直接用 reverse 方法，更简单
         return ans.reverse().toString();
     }
 
