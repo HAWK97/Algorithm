@@ -6,15 +6,6 @@ package com.hawk.leetCode.list;
  */
 public class AddTwoNumbers2 {
 
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode(int x) {
-            val = x;
-        }
-    }
-
     /**
      * 解题思路：使用变量 carry 来表示进位，进位 carry 必定是 0（不进位）或 1（进1位）
      * 算法复杂度：时间复杂度 O(max(m,n))，假设 m 和 n 分别表示 l1 和 l2 的长度，上面的算法最多重复 max(m,n) 次
