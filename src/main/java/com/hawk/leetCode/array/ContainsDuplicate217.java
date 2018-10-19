@@ -14,7 +14,7 @@ public class ContainsDuplicate217 {
      * 我的答案
      * 知识点：对于自平衡二叉搜索树（Java 中的 TreeSet 或 TreeMap），搜索和插入的时间复杂度为 O(log n)
      * 对于哈希表（Java 中的 HashSet 或 HashMap），搜索和插入的时间复杂度为 O(1)
-     * 算法复杂度：时间复杂度 O(n)，搜索和插入的次数为 n，每个操作的时间复杂度为 O(1)
+     * 复杂度分析：时间复杂度 O(n)，搜索和插入的次数为 n，每个操作的时间复杂度为 O(1)
      * 空间复杂度 O(n)，哈希表使用的空间与其中的元素数量成线性关系
      */
     public boolean containsDuplicate(int[] nums) {
