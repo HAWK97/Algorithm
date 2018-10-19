@@ -11,7 +11,7 @@ public class longestPalindrome5 {
      * 解题思路：回文中心的两侧互为镜像。因此，回文可以从它的中心展开，并且只有 2n - 1 个这样的中心
      * 回文中心除了字符串中的每个字符，所含字母数为偶数的回文子串的中心可以处于两字母之间
      * 例如 “abba” 的中心在两个 ‘b’ 之间
-     * 算法复杂度：时间复杂度 O(n^2)，由于围绕中心来扩展回文会耗去 O(n) 的时间，所以总的复杂度为 O(n^2)
+     * 复杂度分析：时间复杂度 O(n^2)，由于围绕中心来扩展回文会耗去 O(n) 的时间，所以总的复杂度为 O(n^2)
      * 空间复杂度 O(1)
      */
     public String longestPalindrome1(String s) {
@@ -55,7 +55,7 @@ public class longestPalindrome5 {
      * 如果我们已经知道了一个子字符串[i + 1...j - 1]是回文的
      * 若s[i] = s[j]，就可以直接判断[i...j]是回文的
      * 因此可以用dp[i][j]表示s[i...j]是否回文
-     * 算法复杂度：时间复杂度 O(n^2)
+     * 复杂度分析：时间复杂度 O(n^2)
      * 空间复杂度 O(n^2)，该方法使用 O(n^2) 的空间来存储表
      */
     public String longestPalindrome2(String s) {
