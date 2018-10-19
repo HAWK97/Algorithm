@@ -12,7 +12,7 @@ public class SingleNumber136 {
 
     /**
      * 我的答案（先排序）
-     * 解题思路、算法复杂度：略
+     * 解题思路、复杂度分析：略
      */
     public int singleNumber1(int[] nums) {
         Arrays.sort(nums);
@@ -28,7 +28,7 @@ public class SingleNumber136 {
 
     /**
      * 我的答案（使用哈希表）
-     * 解题思路、算法复杂度：略
+     * 解题思路、复杂度分析：略
      */
     public int singleNumber2(int[] nums) {
         Set<Integer> set = new HashSet<>(nums.length);
