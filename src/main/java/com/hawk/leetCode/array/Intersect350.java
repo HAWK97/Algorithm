@@ -12,7 +12,7 @@ public class Intersect350 {
      * 哈希表法
      * 解题思路：用 Map 来建立 nums1 中字符和其出现个数之间的映射, 然后遍历 nums2 数组
      * 如果当前字符在 Map 中的个数大于 0，则将此字符加入结果 res 中，然后 Map 的对应值自减 1
-     * 时间复杂度：略
+     * 复杂度分析：略
      */
     public int[] intersect1(int[] nums1, int[] nums2) {
         List<Integer> tmp = new ArrayList<>(Math.min(nums1.length, nums2.length));
@@ -39,7 +39,7 @@ public class Intersect350 {
      * 解题思路：给两个数组排序，然后用两个索引分别代表两个数组的起始位置
      * 如果两个索引所代表的数字相等，则将数字存入结果中，两个索引均自增 1
      * 如果第一个索引所代表的数字大，则第二个索引自增 1，反之第一个索引自增 1
-     * 时间复杂度：略
+     * 复杂度分析：略
      */
     public int[] intersect2(int[] nums1, int[] nums2) {
         Arrays.sort(nums1);
