@@ -1,9 +1,7 @@
 package com.hawk.leetCode.array;
 
-import java.util.Arrays;
-
 /**
- * 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 num1 成为一个有序数组
+ * 给定两个有序整数数组 nums1 和 nums2，将 nums2 合并到 nums1 中，使得 nums1 成为一个有序数组
  * 示例：输入：nums1 = [1,2,3,0,0,0], m = 3 nums2 = [2,5,6], n = 3 输出：[1,2,2,3,5,6]
  */
 public class Merge88 {
