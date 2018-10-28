@@ -42,7 +42,7 @@ public class LongestCommonPrefix14 {
             // 获得第一行 i 列的字符
             char c = strs[0].charAt(i);
             // 依次比较剩余行相同列的字符
-            for (int j = 1; j < strs.length; i++) {
+            for (int j = 1; j < strs.length; j++) {
                 // 若 j 行 i 列的字符与第一行 i 列的字符不同
                 // 或第一行 i 列已经超出了剩余行的最大列数（这个要放在前面判断），最长公共前缀判定结束
                 if (strs[j].length() == i || strs[j].charAt(i) != c) {
