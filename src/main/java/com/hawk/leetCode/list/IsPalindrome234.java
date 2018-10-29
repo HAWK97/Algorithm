@@ -21,6 +21,7 @@ public class IsPalindrome234 {
               preNode = preNode.next;
         }
         ListNode curNode = preNode.next;
+        // 将后半段链表与前半段链表分开
         preNode.next = null;
         ListNode newHead = null;
         // 反转后半段链表
