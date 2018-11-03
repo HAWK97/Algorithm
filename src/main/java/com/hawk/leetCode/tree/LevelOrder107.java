@@ -49,20 +49,20 @@ public class LevelOrder107 {
         if (root == null) {
             return list;
         }
-        Queue<TreeNode> stack = new ArrayDeque<>();
-        stack.offer(root);
-        while (!stack.isEmpty()) {
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.offer(root);
+        while (!queue.isEmpty()) {
             // 获取当前层的结点数
-            int levelNum = stack.size();
+            int levelNum = queue.size();
             List<Integer> subList = new ArrayList<>();
             for (int i = 0; i < levelNum; i++) {
-                TreeNode node = stack.poll();
+                TreeNode node = queue.poll();
                 subList.add(node.val);
                 if (node.left != null) {
-                    stack.offer(node.left);
+                    queue.offer(node.left);
                 }
                 if (node.right != null) {
-                    stack.offer(node.right);
+                    queue.offer(node.right);
                 }
             }
             list.add(subList);
