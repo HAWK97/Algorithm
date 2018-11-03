@@ -1,7 +1,6 @@
 package com.hawk.leetCode.tree;
 
-import java.util.ArrayDeque;
-import java.util.Queue;
+import com.hawk.dataStructure.stack.Stack;
 
 /**
  * 题目描述：给定一个二叉树，检查它是否是镜像对称的
@@ -34,50 +33,39 @@ public class IsSymmetric101 {
 
     public boolean isSymmetric1(TreeNode root) {
         if (root == null) {
-            return true;
-        }
-        return isSymmetric1(root.left, root.right);
+        return true;
     }
+        return isSymmetric1(root.left, root.right);
+}
 
     /**
      * 迭代
-     * 未通过！
      */
     public boolean isSymmetric2(TreeNode root) {
         if (root == null) {
             return true;
         }
-        Queue<TreeNode> q1 = new ArrayDeque<>();
-        Queue<TreeNode> q2 = new ArrayDeque<>();
-        if (root.left != null) {
-            q1.offer(root.left);
-        }
-        if (root.right != null) {
-            q2.offer(root.right);
-        }
-        while (!q1.isEmpty() && !q2.isEmpty()) {
-            TreeNode node1 = q1.poll();
-            TreeNode node2 = q2.poll();
-            if ((node1 == null && node2 != null) || (node1 != null && node2 == null)) {
+        Stack<TreeNode> stack = new Stack<>();
+        TreeNode p = root.left;
+        TreeNode q = root.right;
+        stack.push(p);
+        stack.push(q);
+        while (!stack.isEmpty()) {
+            p = stack.pop();
+            q = stack.pop();
+            if (p == null && q == null) {
+                continue;
+            }
+            if (p == null || q == null) {
                 return false;
             }
-            if (node1 != null) {
-                if (node1.val != node2.val) {
-                    return false;
-                }
-                if (node1.left != null) {
-                    q1.offer(node1.left);
-                }
-                if (node1.right != null) {
-                    q1.offer(node1.right);
-                }
-                if (node2.right != null) {
-                    q2.offer(node2.right);
-                }
-                if (node2.left != null) {
-                    q2.offer(node2.left);
-                }
+            if (p.val != q.val) {
+                return false;
             }
+            stack.push(p.left);
+            stack.push(q.right);
+            stack.push(p.right);
+            stack.push(q.left);
         }
         return true;
     }
