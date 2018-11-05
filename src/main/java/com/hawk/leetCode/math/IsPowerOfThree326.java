@@ -10,9 +10,6 @@ public class IsPowerOfThree326 {
      * 我的答案（递归）
      */
     public boolean isPowerOfThree1(int n) {
-        if (n == 3) {
-            return true;
-        }
         if (n == 1) {
             return true;
         }
