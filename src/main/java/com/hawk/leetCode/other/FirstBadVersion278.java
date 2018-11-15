@@ -23,7 +23,6 @@ public class FirstBadVersion278 {
          * 网上答案
          */
         public int firstBadVersion(int n) {
-            // 使用 long 防止 int 相加溢出
             int mid, left, right;
             left = 1;
             right = n;
