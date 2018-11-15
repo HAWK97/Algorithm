@@ -1,7 +1,5 @@
 package com.hawk.algorithms.simplifiedSort;
 
-// 首先，找到数组中最小的那个元素，其次，将它和数组的第一个元素交换位置（如果第一个元素就是最小元素那么它就和自己交换）
-// 再次，在剩下的元素中找到最小的元素，将它和数组的第二个元素交换位置。如此往复，直到将整个数组排序
 public class SelectSort {
 
     private static void swap(int[] a, int i, int j) {
@@ -17,6 +15,10 @@ public class SelectSort {
         System.out.println();
     }
 
+    /**
+     * 基本思想：首先，找到数组中最小的那个元素，其次，将它和数组的第一个元素交换位置（如果第一个元素就是最小元素那么它就和自己交换）
+     * 再次，在剩下的元素中找到最小的元素，将它和数组的第二个元素交换位置。如此往复，直到将整个数组排序
+     */
     private static int[] selectSort(int[] a, int n) {
         for (int i = 0; i < n; i++) {
             int min = i;
