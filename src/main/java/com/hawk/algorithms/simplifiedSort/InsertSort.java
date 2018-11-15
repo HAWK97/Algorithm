@@ -1,7 +1,5 @@
 package com.hawk.algorithms.simplifiedSort;
 
-// 把n个待排序的元素看成一个有序表和一个无序表。开始时有序表中只包含1个元素，无序表中包含n-1个元素
-// 排序过程中每次从无序表中取出第一个元素，将它插入到有序表中的适当位置，使之成为新的有序表，重复n-1次可完成排序过程
 public class InsertSort {
 
     private static void swap(int[] a, int i, int j) {
@@ -17,6 +15,10 @@ public class InsertSort {
         System.out.println();
     }
 
+    /**
+     * 基本思想：把 n 个待排序的元素看成一个有序表和一个无序表。开始时有序表中只包含 1 个元素，无序表中包含 n - 1 个元素
+     * 排序过程中每次从无序表中取出第一个元素，将它插入到有序表中的适当位置，使之成为新的有序表，重复 n - 1 次可完成排序过程
+     */
     private static int[] insertSort(int[] a, int n) {
         for (int i = 1; i < n; i++) {
             for (int j = i; j > 0 && a[j] < a[j - 1]; j--) {
