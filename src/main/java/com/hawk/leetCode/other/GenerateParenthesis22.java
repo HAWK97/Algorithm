@@ -14,7 +14,7 @@ import java.util.List;
  *   "()()()"
  * ]
  */
-public class GenerateParenthesis {
+public class GenerateParenthesis22 {
 
     /**
      * 递归法
@@ -23,15 +23,19 @@ public class GenerateParenthesis {
         // 定义两个变量 left 和 right 分别表示剩余左右括号的个数
         // 如果在某次递归时，左括号的剩余个数大于右括号的剩余个数
         // 说明此时生成的字符串中右括号的个数大于左括号的个数，即会出现 ")(" 这样的非法串，所以这种情况直接返回
-        if (left < 0 || right > 0 || left  >right) {
+        if (left > right) {
             return;
         }
         if (left == 0 && right == 0) {
             list.add(out);
-            return;
+        } else {
+            if (left > 0) {
+                helper(left - 1, right, out + "(", list);
+            }
+            if (right > 0) {
+                helper(left, right - 1, out + ")", list);
+            }
         }
-        helper(left - 1, right, out + "(", list);
-        helper(left, right - 1, out + ")", list);
     }
 
     public List<String> generateParenthesis(int n) {
