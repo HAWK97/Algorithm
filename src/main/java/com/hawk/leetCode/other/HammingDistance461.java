@@ -12,7 +12,6 @@ package com.hawk.leetCode.other;
  */
 public class HammingDistance461 {
 
-
     /**
      * 我的答案
      */
