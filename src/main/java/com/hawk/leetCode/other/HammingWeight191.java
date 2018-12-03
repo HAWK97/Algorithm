@@ -13,7 +13,7 @@ public class HammingWeight191 {
     public int hammingWeight(int n) {
         int result = 0;
         for (int i = 0; i < 32; i++) {
-            // 判断最后一位是否与1相等，若相等就将 result + 1
+            // 判断最后一位是否与 1 相等，若相等就将 result + 1
             result += n & 1;
             // 将原数字右移一位
             n = n >> 1;
