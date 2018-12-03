@@ -10,7 +10,7 @@ import java.util.List;
  * 示例：输入："23"
  * 输出：["ad", "ae", "af", "bd", "be", "bf", "cd", "ce", "cf"]
  */
-public class LetterCombinations17 {
+public class  LetterCombinations17 {
 
     /**
      * 递归法
@@ -30,7 +30,7 @@ public class LetterCombinations17 {
         }
     }
 
-    public List<String> letterCombinations1(String digits) {
+    public List<String> letterCombinations(String digits) {
         List<String> list = new ArrayList<>();
         if (digits.isEmpty()) {
             return list;
