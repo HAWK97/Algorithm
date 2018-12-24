@@ -21,6 +21,7 @@ public class  LetterCombinations17 {
             list.add(out.toString());
         }
         else {
+            // 因为输入的数字从 2 开始，所以要减去 2
             String str = dict[digits.charAt(level) - '2'];
             for (int i = 0; i < str.length(); i++) {
                 out.append(str.charAt(i));
