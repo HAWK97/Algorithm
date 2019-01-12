@@ -5,6 +5,9 @@ package com.hawk.swordoffer.string;
  */
 public class LeftRotateString {
 
+    /**
+     * 我的答案
+     */
     public String LeftRotateString(String str,int n) {
         n %= str.length();
         char[] chars = str.toCharArray();
