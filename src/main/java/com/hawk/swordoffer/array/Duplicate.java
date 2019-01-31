@@ -5,7 +5,7 @@ package com.hawk.swordoffer.array;
  * 数组中某些数字是重复的，但不知道有几个数字是重复的，也不知道每个数字重复几次
  * 请找出数组中任意一个重复的数字
  */
-public class duplicate {
+public class Duplicate {
 
     public boolean duplicate(int numbers[],int length,int [] duplication) {
         if (length == 0 || numbers == null) {
