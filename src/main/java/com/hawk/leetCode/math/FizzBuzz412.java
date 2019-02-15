@@ -10,7 +10,7 @@ import java.util.List;
  * 3.如果 n 同时是3和5的倍数，输出 “FizzBuzz”
  * 示例：略
  */
-public class FizzBizz412 {
+public class FizzBuzz412 {
 
     public List<String> fizzBuzz(int n) {
         List<String> list = new ArrayList<>();
