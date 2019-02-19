@@ -13,6 +13,8 @@ public class MissingNumber268 {
      */
     public int missingNumber(int[] nums) {
         // 因为缺失了一个数，所以要加一
+        // 这里的 n 指如果不缺少数字时序列的长度
+        // 题目中的 n 等于 nums.length
         int n = nums.length + 1;
         int sum = n * (n - 1) / 2;
         for (int i = 0; i < nums.length; i++) {
