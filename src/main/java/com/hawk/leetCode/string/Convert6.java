@@ -35,7 +35,7 @@ public class Convert6 {
             if (curRow == 0 || curRow == numRows - 1) {
                 goingDown = !goingDown;
             }
-            curRow += goingDown ? -1 : 1;
+            curRow += goingDown ? 1 : -1;
         }
         StringBuilder result = new StringBuilder();
         for (StringBuilder row : rows) {
